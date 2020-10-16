@@ -8,24 +8,28 @@ module.exports = {
     filename: '[name].js',
     path: commonPaths.outputPath,
     chunkFilename: '[name].js',
+    publicPath: '/',
   },
   module: {
     rules: [
       {
-        test: /\.(css|scss)$/,
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.less$/,
         use: [
           'style-loader',
+          'css-loader',
+          'sass-loader',
           {
-            loader: 'css-loader',
+            loader: 'less-loader',
             options: {
-              sourceMap: true,
-              localsConvention: 'camelCase',
-              modules: {
-                localIdentName: '[local]___[hash:base64:5]',
+              lessOptions: {
+                javascriptEnabled: true,
               },
             },
           },
-          'sass-loader',
         ],
       },
     ],
@@ -34,6 +38,7 @@ module.exports = {
     contentBase: commonPaths.outputPath,
     compress: true,
     hot: true,
+    historyApiFallback: true,
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
 };

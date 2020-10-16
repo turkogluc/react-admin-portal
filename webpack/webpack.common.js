@@ -24,6 +24,15 @@ module.exports = {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         exclude: /(node_modules)/,
+        options: {
+          presets: ['@babel/react'],
+          plugins: [['import', { libraryName: 'antd', style: true }]],
+        },
+      },
+      {
+        test: /\.(js|jsx)$/,
+        use: 'react-hot-loader/webpack',
+        include: /node_modules/,
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
@@ -61,7 +70,7 @@ module.exports = {
   },
   resolve: {
     modules: ['src', 'node_modules'],
-    extensions: ['*', '.js', '.jsx', '.css', '.scss'],
+    extensions: ['*', '.js', '.jsx', '.css', '.scss', '.less'],
   },
   plugins: [
     new webpack.ProgressPlugin(),
