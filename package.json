@@ -31,10 +31,6 @@
       "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js",
       "\\.(jpg|gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
     },
-    "transform": {
-      "^.+\\.(js|jsx)$": "babel-jest",
-      ".+\\.(css|styl|less|sass|scss)$": "<rootDir>/node_modules/jest-css-modules-transform"
-    },
     "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js",
     "moduleFileExtensions": [
       "css",
@@ -101,7 +97,7 @@
     "clean-webpack-plugin": "3.0.0",
     "connect-history-api-fallback": "1.6.0",
     "cross-env": "7.0.2",
-    "css-loader": "3.6.0",
+    "css-loader": "^5.0.0",
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.4",
     "eslint": "6.8.0",
@@ -133,7 +129,7 @@
     "pretty-quick": "2.0.2",
     "sass-loader": "8.0.2",
     "script-ext-html-webpack-plugin": "2.1.4",
-    "style-loader": "1.2.1",
+    "style-loader": "^2.0.0",
     "terser-webpack-plugin": "4.2.2",
     "webpack": "4.44.2",
     "webpack-cli": "3.3.12",

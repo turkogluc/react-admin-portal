@@ -50,20 +50,23 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(css|scss)$/,
+        test: /\.(css|scs)$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.less$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          'style-loader',
+          'css-loader',
+          'sass-loader',
           {
-            loader: 'css-loader',
+            loader: 'less-loader',
             options: {
-              sourceMap: false,
-              localsConvention: 'camelCase',
-              modules: {
-                localIdentName: '[local]___[hash:base64:5]',
+              lessOptions: {
+                javascriptEnabled: true,
               },
             },
           },
-          'sass-loader',
         ],
       },
     ],

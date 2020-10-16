@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+}
+
+.menu {
+  .ant-menu-horizontal {
+    & > .ant-menu-submenu {
+      float: right;
+    }
+    border: none;
+  }
+  box-shadow: #e4ecef;
+  position: relative;
+  .ant-menu-submenu-title {
+    width: 64px;
+    height: 64px;
+    text-align: center;
+    padding-top: 8px;
+  }
+}
+
+.trigger {
+  margin-left: 16px;
+  margin-right: 16px;
+  align-self: center;
+
+}
+
+.menu-logo {
+  background-image: url('../../../public/icon.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 35px;
+  background-size: 100%;
+  margin: 20px;
+  color: #ffffff;
+}
