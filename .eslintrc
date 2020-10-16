@@ -46,7 +46,7 @@
     "react/jsx-boolean-value": ["warn", "never"],
     "react/jsx-closing-bracket-location": ["warn", "after-props"],
     "react/jsx-curly-spacing": ["warn", "never"],
-    "react/jsx-filename-extension": ["warn", { "extensions": [".jsx"] }],
+    "react/jsx-filename-extension": ["warn", { "extensions": ["js",".jsx"] }],
     "react/jsx-first-prop-new-line": ["warn", "multiline"],
     "react/jsx-handler-names": [
       "warn",
