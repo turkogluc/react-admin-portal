@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import Dashboard from '../page/dashboard/Dashboard';
 import ShowCustomers from '../page/customer/ShowCustomers';
 import ShowProducts from '../page/product/ShowProducts';
+import AddProduct from '../page/product/AddProduct';
 
 const routes = [
   {
@@ -19,6 +20,11 @@ const routes = [
     path: '/products',
     component: ShowProducts,
     key: '/products',
+  },
+  {
+    path: '/add-product',
+    component: AddProduct,
+    key: '/add-product',
   },
 ];
 
