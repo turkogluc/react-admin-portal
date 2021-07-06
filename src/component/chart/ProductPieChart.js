@@ -43,7 +43,7 @@ function ProductPieChart() {
           visible: true,
           type: 'outer',
           offset: 20,
-          formatter: val => `${val}%`,
+          formatter: val => `${val.type} - ${val.value}%`,
         }}
       >
         <Interaction type="element-single-selected" />
