@@ -1,6 +1,6 @@
 ## React Admin Portal
 
-Read the blog posts showinig the step by step implementation:
+Read the blog posts showing the step by step implementation:
 
 * [Developing a Modern Admin Portal with React, Redux, and Ant Design (Part-1)](https://turkogluc.com/developing-react-admin-portal-with-redux-and-ant-design/)
 
